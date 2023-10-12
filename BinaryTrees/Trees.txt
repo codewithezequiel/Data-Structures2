@@ -1,0 +1,98 @@
+Represent Hierarchical data:
+Trees are used to represent hierarchical data. This could represent a list of people such as in 
+an organization or files and folders in my disk.
+
+Databases:
+Database Management Systems use trees for indexing so we can quickly look up data.
+
+Autocompletion:
+Trees are also used in the implementation of Autocompletion i.e chrome. Chrome stores all of my 
+past web searches in a tree.
+Whenever i type a query, chrome tries to match it with previously stored queries.
+
+
+Compilers: 
+Compilers use a special kind of tree called a syntax tree to parse expression.
+
+Compression Algorithms (JPEG, MP3):
+Trees are also used in compression algorithms.
+
+
+In a Binary Search Tree:
+All of the nodes left to the root node are smaller. All of the nodes to the right of
+the root node are greater.
+
+Whenever we throw half of our items and narrow down our search, we are operating in logarithmic time.
+
+Trees provide a better performance than arrays and linked lists, in addition, trees allow us 
+to model hierarchical data.
+
+Figure 1:
+            7
+          /   \
+        4       9
+       / \     / \
+      1   6   8  10
+
+Traversing Trees
+----------------
+In linear data structures like in arrays and linked lists, there is only one way for traversal.
+We start at the first node or element, then traverse forward.
+
+On the other hand, in trees there are two possible directions in which to traverse the tree (Fig.1).
+
+There are many approaches for traversing trees. All these approaches are classified into two
+categories. We can either go Breadth First or Depth First. 
+
+In Breadth First (sometimes) we traverse or visit the nodes based on the level order. This means, the 
+nodes in which they are visited in a Breadth First traversal is: 7,4,9,1,6,8,10
+
+Depth First traversal can be approached in 3 different ways: 
+These are the ways: Pre-order, In-order, Post-order.
+
+Pre-order: Root Left Right 
+In-order: Left Root Right
+Post-order: Left Right Root
+
+Figure 1:
+            7
+          /   \
+        4       9
+       / \     / \
+      1   6   8  10
+
+Nodes visited:
+Pre-order: 7,4,1,6,9,8,10
+
+Note: With this approach, instead of visiting nodes on a level to level basis, we start at the root 
+of our tree and go deep to its children and grandchildren - this is why it is called depth first traversal.
+
+In-order: 1,4,6,7,8,9,10 
+
+
+Post-order: 1,6,4,8,10,9,7
+
+
+Exercise: 
+
+Figure 1:
+            20
+          /    \
+       10       30
+       / \     / 
+      6  14  24
+     / \       \
+    3   8       26
+
+Nodes visited:
+--------------
+Breadth First:
+20,10,30,6,14,24,3,8,26
+--------------
+
+Depth-First:
+Pre-order (Root, Left, Right): 20,10,6,3,8,14,30,24,26 (As I go down the tree, I am printing the nodes that I visit)
+In-order (Left, Root, Right): 3,6,8,10,14,20,24,26,30 (I dont print the nodes until i reach the most left subtree, essentially printing nodes as i traverse upwards)
+Post-order (Left, Right, Root): 3,8,6,14,10,26,24,30,20 (similar to in-order, i start printing nodes while traversing up the tree.)
+
+
